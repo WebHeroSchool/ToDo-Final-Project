@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
+const count = 29;
+const flag = true;
+
 function App() {
   return (
     <div className="App">
@@ -11,6 +14,32 @@ function App() {
         </p>
         <p>
           Hello World!
+        </p>
+        <p style={{
+        	color: 'red'
+        }}>
+          It's a to-do app
+        </p>
+        <p>
+        	{count}
+        </p>
+        <p>
+        	{33}
+        </p>
+        <p>
+        	{31+37}
+        </p>
+        <p>
+        	{flag && 'Flag is true'}
+        </p>
+        <p>
+        	{count == 27 ? 'right' : 'wrong'}
+        </p>
+        <p>
+        	{undefined}
+        	{null}
+        	{false}
+        	{true}
         </p>
         <a
           className="App-link"

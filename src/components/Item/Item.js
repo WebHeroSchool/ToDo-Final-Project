@@ -1,3 +1,3 @@
-const Item = () => (<span>Very important!</span>);
+const Item = ({ todoItem }) => (<span>{ todoItem }</span>);
 
 export default Item;

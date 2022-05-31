@@ -2,11 +2,10 @@ import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
 import InputItem from '../InputItem/InputItem';
 
-
 const App = () => {
   const items = [
     {
-      value: 'Male a new app'
+      value: 'Make a new app'
     },
     {
       value: 'Learn props'

@@ -3,7 +3,6 @@ import Footer from '../Footer/Footer';
 import InputItem from '../InputItem/InputItem';
 import './App.css'
 
-
 const App = () => {
   const items = [
     {

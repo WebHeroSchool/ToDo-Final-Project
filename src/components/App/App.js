@@ -8,6 +8,8 @@ const App = () => (<div>
   <InputItem />
   <ItemList todoItem={todoItem} />
   <Footer count ={3} />
+  <ItemList />
+  <Footer />
 </div>);
 
 export default App;

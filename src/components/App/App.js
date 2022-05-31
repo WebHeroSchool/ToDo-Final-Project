@@ -1,12 +1,13 @@
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
 import InputItem from '../InputItem/InputItem';
+import './App.css'
 
 
 const App = () => {
   const items = [
     {
-      value: 'Male a new app'
+      value: 'Make a new app'
     },
     {
       value: 'Learn props'
@@ -17,8 +18,8 @@ const App = () => {
   ];
 
   return (
-    <div>
-      <h3>Things To Do</h3>
+    <div className = 'wrap'>
+      <h3 className = 'wrap-title'>Things To Do</h3>
       <InputItem />
       <ItemList items={items} />
       <Footer count ={3} />

@@ -1,7 +1,7 @@
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
 import InputItem from '../InputItem/InputItem';
-import './App.css'
+import styles from './App.module.css'
 
 
 const App = () => {
@@ -18,8 +18,8 @@ const App = () => {
   ];
 
   return (
-    <div className = 'wrap'>
-      <h3 className = 'wrap-title'>Things To Do</h3>
+    <div className={styles.wrap}>
+      <h3 className={styles.title}>Things To Do</h3>
       <InputItem />
       <ItemList items={items} />
       <Footer count ={3} />

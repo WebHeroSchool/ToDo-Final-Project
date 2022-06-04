@@ -1,19 +1,22 @@
+import InputItem from '../InputItem/InputItem';
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
-import InputItem from '../InputItem/InputItem';
 import styles from './App.module.css'
 
 
 const App = () => {
   const items = [
     {
-      value: 'Make a new app'
+      value: 'Make a new app',
+      isDone: true
     },
     {
-      value: 'Learn props'
+      value: 'Learn props',
+      isDone: false
     },
     {
-      value: 'Do homework'
+      value: 'Do homework',
+      isDone: true
     }
   ];
 

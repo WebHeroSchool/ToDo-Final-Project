@@ -1,8 +1,28 @@
 .item {
-  color: #333;
+  color: #000;
+  display: flex;
+  height: 34px;
+  border: 1px solid #cccccc;
+  border-radius: 41px;
+  padding: 0 10px 0 12px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.item:hover {
+  border: 1px solid #356EFF;
+}
+
+.item:hover .remove {
+  opacity: 1;
 }
 
 .done {
-  color: #c4c4c4;
-  text-decoration: line-through;
+  color: #cccccc;
 }
+
+.remove {
+  margin-left: auto;
+  opacity: 0;
+}
+

@@ -1,0 +1,15 @@
+.field {
+  width: 90.9%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input {
+  width: 89%;
+  height: 34px;
+  border: 1px solid #cccccc;
+  border-radius: 29px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+}

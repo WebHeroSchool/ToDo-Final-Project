@@ -1,15 +1,15 @@
-import TextField from '@mui/material/TextField';
-import Box from '@mui/material/Box';
+import styles from "./InputItem.module.css";
+import adder from './adder.png'
 
-const InputItem = () => <div>
-    <Box
-      sx={{
-        width: 500,
-        maxWidth: '100%',
-      }}
-    >
-      <TextField fullWidth label="Type in what you have to do..." id="fullWidth" />
-    </Box>
-</div>;
+const InputItem = () => (
+  <div className={styles.field}>
+    <input
+      type="text"
+      className={styles.input}
+      placeholder="Type in what you have to do..."
+    />
+    <img src={adder} alt='adder' />
+  </div>
+);
 
 export default InputItem;

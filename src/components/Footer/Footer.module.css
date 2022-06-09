@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+  width: 90.9%;
+}
+
+.counter {
+  margin-left: 8px;
+}
+
+button {
+  border-width: 0;
+  background: #fff;
+  border-radius: 23px;
+}
+
+button:hover {
+  color: #fff;
+  background: #356eff;
+}

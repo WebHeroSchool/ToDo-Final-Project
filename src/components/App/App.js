@@ -6,8 +6,8 @@ import styles from './App.module.css'
 
 
 class App extends React.Component {
-  render() {
-    const items = [
+  state = {
+  	items: [
       {
         value: "Make a new app",
         isDone: true
@@ -20,12 +20,14 @@ class App extends React.Component {
         value: "Do homework",
         isDone: true
       }
-    ];
+    ]
+  };
+  render() {
     return (
       <div className={styles.wrap}>
         <h3 className={styles.title}>Things To Do</h3>
         <InputItem />
-        <ItemList items={items} />
+        <ItemList items={this.state.items} />
         <Footer count={3} />
       </div>
     );

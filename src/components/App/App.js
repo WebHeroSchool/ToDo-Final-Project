@@ -22,12 +22,15 @@ class App extends React.Component {
       }
     ]
   };
+
+  onClickDone = isDone => console.log(isDone);
+
   render() {
     return (
       <div className={styles.wrap}>
         <h3 className={styles.title}>Things To Do</h3>
         <InputItem />
-        <ItemList items={this.state.items} />
+        <ItemList items={this.state.items} onClickDone={this.onClickDone} />
         <Footer count={3} />
       </div>
     );

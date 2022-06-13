@@ -9,14 +9,17 @@
   margin-left: 8px;
 }
 
-button {
+.filter button,
+.clear {
   background: #fff;
   border-radius: 23px;
   border-width: 0;
   cursor: pointer;
+  padding-top: 0;
 }
 
-button:hover {
+.filter button:hover,
+.clear:hover {
   background: #356eff;
   color: #fff;
 }

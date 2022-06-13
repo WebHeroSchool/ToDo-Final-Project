@@ -4,7 +4,6 @@ import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
 import styles from './App.module.css'
 
-
 class App extends React.Component {
   state = {
   	items: [
@@ -38,12 +37,12 @@ class App extends React.Component {
       return newItem;
     });
 
-    this.setState({ items: newItemList});
+    this.setState({ items: newItemList });
   };
 
   onClickDelete = id => {
     const removeItemList = this.state.items.filter(item => item.id !==id);
-    this.setState({ items: removeItemList});
+    this.setState({ items: removeItemList });
   };
 
   render() {

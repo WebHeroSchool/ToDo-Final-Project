@@ -20,6 +20,7 @@ class App extends React.Component {
         isDone: true
       }
     ];
+    
     return (
       <div className={styles.wrap}>
         <h3 className={styles.title}>Things To Do</h3>

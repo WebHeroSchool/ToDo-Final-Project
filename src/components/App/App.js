@@ -5,8 +5,8 @@ import Footer from '../Footer/Footer';
 import styles from './App.module.css'
 
 class App extends React.Component {
-  state = {
-  	items: [
+  render() {
+    const items = [
       {
         value: "Make a new app",
         isDone: true
@@ -33,7 +33,7 @@ class App extends React.Component {
         <Footer count={3} />
       </div>
     );
-  }
-}
+  } 
+};
 
 export default App;

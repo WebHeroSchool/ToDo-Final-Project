@@ -25,9 +25,12 @@ const Item = ({ value, isDone, onClickDone, id, onClickDelete }) => (
       checkedIcon={<CheckCircleIcon />}
     />
     {value}
-    <button className={styles.remove} ><img src={remove} alt="remove" onClick={() => onClickDelete(id)}/></button>
-    
+    <button className={styles.remove} ><img src={remove} alt="remove" onClick={() => onClickDelete(id)}/></button>    
   </div>
 );
+
+Item.defaultProps = {
+  checked: false
+}
 
 export default Item;

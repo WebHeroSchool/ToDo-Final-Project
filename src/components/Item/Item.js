@@ -5,9 +5,9 @@ import CircleUnchecked from "@material-ui/icons/RadioButtonUnchecked";
 import Checkbox from "@mui/material/Checkbox";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
+
 const Item = ({ value, isDone, onClickDone, id }) => (
-  <div
-    className={classnames({
+  <div className={classnames({
       [styles.item]: true,
       [styles.done]: isDone
     })}
@@ -20,7 +20,8 @@ const Item = ({ value, isDone, onClickDone, id }) => (
         marginRight: 8.5
       }}
       checked={isDone}
-      tabIndex={-1}      
+      tabIndex={-1}
+      onClick={() => onClickDone(isDone)} 
       icon={<CircleUnchecked />}
       checkedIcon={<CheckCircleIcon />}
     />

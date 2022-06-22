@@ -19,17 +19,21 @@ class App extends React.Component {
         value: "Do homework",
         isDone: true
       }
-    ];
-    
+    ]
+  };
+
+  onClickDone = isDone => console.log(isDone);
+
+  render() {
     return (
       <div className={styles.wrap}>
         <h3 className={styles.title}>Things To Do</h3>
         <InputItem />
-        <ItemList items={items} />
+        <ItemList items={this.state.items} onClickDone={this.onClickDone} />
         <Footer count={3} />
       </div>
     );
-  }
-}
+  } 
+};
 
 export default App;

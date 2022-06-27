@@ -22,7 +22,11 @@
 }
 
 .remove {
+  background: #fff;
+  border-width: 0;
+  cursor: pointer;
   margin-left: auto;
   opacity: 0;
+  padding: 0;
 }
 

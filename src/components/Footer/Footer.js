@@ -10,4 +10,8 @@ const Footer = ({ count }) => <div className={styles.footer}>
   <button className={styles.clear}>Clear Completed</button>
 </div>;
 
+Footer.defaultProps = {
+  count: 0
+};
+
 export default Footer;

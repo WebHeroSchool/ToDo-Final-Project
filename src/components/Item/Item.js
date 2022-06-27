@@ -30,4 +30,8 @@ const Item = ({ value, isDone, onClickDone, id, onClickDelete }) => (
   </div>
 );
 
+Item.defaultProps = {
+  checked: false
+}
+
 export default Item;

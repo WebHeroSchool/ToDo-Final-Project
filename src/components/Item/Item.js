@@ -6,12 +6,13 @@ import Checkbox from "@mui/material/Checkbox";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import PropTypes from 'prop-types';
 
+
 const Item = ({ value, isDone, onClickDone, id, onClickDelete }) => (
   <div
     className={classnames({
       [styles.item]: true,
       [styles.done]: isDone
-    })}    
+    })}
   >
     <Checkbox
       style={{

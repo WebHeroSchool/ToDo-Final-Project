@@ -9,20 +9,36 @@ class App extends React.Component {
     const items = [
       {
         value: "Make a new app",
-        isDone: true
+        isDone: true,
+        id: 1
       },
       {
         value: "Learn props",
-        isDone: false
+        isDone: false,
+        id: 2
       },
       {
         value: "Do homework",
-        isDone: true
+        isDone: true,
+        id: 3
       }
-    ]
+    ],
+    count: 6
   };
 
-  onClickDone = isDone => console.log(isDone);
+  onClickDone = id => {
+    const newItemList = this.state.items.map(item => {
+      const newItem = { ...item};
+
+      if (item.id === id) {
+        newItem.isDone = !item.isDone;
+      }
+
+      return newItem;
+    });
+
+    this.setState({ items: newItemList});
+  };
 
   render() {
     return (
@@ -30,7 +46,7 @@ class App extends React.Component {
         <h3 className={styles.title}>Things To Do</h3>
         <InputItem />
         <ItemList items={this.state.items} onClickDone={this.onClickDone} />
-        <Footer count={3} />
+        <Footer count={this.state.count} />
       </div>
     );
   } 

@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./InputItem.module.css";
 import adder from './adder.png';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 
 class InputItem extends React.Component {
   state = {
@@ -57,6 +58,10 @@ class InputItem extends React.Component {
     );
   }
 }
+
+InputItem.propTypes = {
+  onClickAdd: PropTypes.func
+};
 
 export default InputItem;
 

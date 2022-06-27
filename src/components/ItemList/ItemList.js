@@ -10,6 +10,7 @@ const ItemList = ({ items, onClickDone, onClickDelete}) => (<ul className={style
       onClickDone={onClickDone}
       onClickDelete={onClickDelete} />
   </li>)}
-</ul>);
+</ul>
+);
 
 export default ItemList;

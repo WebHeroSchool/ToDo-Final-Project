@@ -61,4 +61,23 @@ Item.propTypes = {
   id: PropTypes.number
 };
 
+Item.defaultProps = {
+  checked: false
+}
+
+Item.propTypes = {
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+    ]),
+  isDone: PropTypes.bool,
+  onClickDone: PropTypes.func,
+  id: PropTypes.number,
+  onClickDelete: PropTypes.func
+};
+
+Item.defaultProps = {
+  checked: false
+}
+
 export default Item;

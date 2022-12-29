@@ -4,7 +4,6 @@ import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
 import styles from './App.module.css'
 
-
 const App = () => {
   const initialState = {
     items: [
@@ -67,9 +66,10 @@ const App = () => {
       <h3 className={styles.title}>Things To Do</h3>
       <InputItem onClickAdd={onClickAdd} />
       <ItemList 
-      items={items}
-      onClickDone={onClickDone}
-      onClickDelete={onClickDelete} />
+        items={items}
+        onClickDone={onClickDone}
+        onClickDelete={onClickDelete}
+      />
       <Footer count={count} />
     </div>
   );  

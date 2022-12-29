@@ -1,13 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import InputItem from '../InputItem/InputItem';
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
 import styles from './App.module.css'
 
 
-class App extends React.Component {
-  state = {
-  	items: [
+const App = () => {
+  const initialState = {
+    items: [
       {
         value: "Make a new app",
         isDone: true,
@@ -25,9 +25,12 @@ class App extends React.Component {
       }
     ],
     count: 3
-  };
+  }
 
-  onClickDone = id => {
+  const [items, setItems] = useState(initialState.items);
+  const [count, setCount] = useState(initialState.count);
+
+  const onClickDone = (id) => {
     const newItemList = this.state.items.map(item => {
       const newItem = { ...item};
 
@@ -37,41 +40,39 @@ class App extends React.Component {
 
       return newItem;
     });
-
-    this.setState({ items: newItemList });
+    setItems(newItemList);
   };
 
-  onClickDelete = id => {
-    const removeItemList = this.state.items.filter(item => item.id !==id);
-    this.setState({ items: removeItemList });
+  const onClickDelete = (id) => {
+    const removeItemList = items.filter(item => item.id !==id);
+    setItems(removeItemList);
+    setCount((count) => count - 1);
   };
 
-  onClickAdd = (value) =>
-    this.setState((state) => ({
-      items: [
-        ...state.items,
+  const onClickAdd = (value) => {
+    const addItemList = [
+        ...items,
         {
           value,
           isDone: false,
-          id: state.count + 1
+          id: count + 1
         }
-      ],
-      count: state.count + 1
-    }));
-
-  render() {
-    return (
-      <div className={styles.wrap}>
-        <h3 className={styles.title}>Things To Do</h3>
-        <InputItem onClickAdd={this.onClickAdd} />
-        <ItemList 
-        items={this.state.items}
-        onClickDone={this.onClickDone}
-        onClickDelete={this.onClickDelete} />
-        <Footer count={this.state.count} />
-      </div>
-    );
-  }
+      ];
+    setItems(addItemList);
+    setCount((count) => count + 1)
+  };
+  
+  return (
+    <div className={styles.wrap}>
+      <h3 className={styles.title}>Things To Do</h3>
+      <InputItem onClickAdd={onClickAdd} />
+      <ItemList 
+      items={items}
+      onClickDone={onClickDone}
+      onClickDelete={onClickDelete} />
+      <Footer count={count} />
+    </div>
+  );  
 }
 
 export default App;

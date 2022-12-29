@@ -76,4 +76,8 @@ Item.propTypes = {
   onClickDelete: PropTypes.func
 };
 
+Item.defaultProps = {
+  checked: false
+}
+
 export default Item;

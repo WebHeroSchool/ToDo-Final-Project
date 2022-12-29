@@ -15,8 +15,8 @@ Footer.defaultProps = {
   count: 0
 };
 
-Footer.defaultProps = {
-  count: 0
+Footer.propTypes = {
+  count: PropTypes.number 
 };
 
 export default Footer;

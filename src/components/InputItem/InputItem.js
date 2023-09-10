@@ -1,25 +1,24 @@
 import React from "react";
 import styles from "./InputItem.module.css";
-import adder from './adder.png';
-import classnames from 'classnames';
-import PropTypes from 'prop-types';
+import classnames from "classnames";
+import PropTypes from "prop-types";
 
 class InputItem extends React.Component {
   state = {
-    inputValue: ""    
-   };
+    inputValue: ""
+  };
 
   onButtonClick = () => {
     this.setState({
-      inputValue: ""     
+      inputValue: ""
     });
 
-    let error;    
-    
+    let error;
+
     if (!this.state.inputValue) {
-      error = "Cannot be empty";     
+      error = "Cannot be empty";
     } else {
-      this.props.onClickAdd(this.state.inputValue);  
+      this.props.onClickAdd(this.state.inputValue);
     }
 
     this.setState({ error: error });
@@ -31,7 +30,7 @@ class InputItem extends React.Component {
         <span
           className={classnames({
             [styles.error]: this.state.error
-            })}
+          })}
         >
           {this.state.error}{" "}
         </span>
@@ -42,14 +41,13 @@ class InputItem extends React.Component {
               [styles.input]: true,
               [styles.input_error]: this.state.error
             })}
-            placeholder="Type in what you have to do..."
+            placeholder="Just type your todo here..."
             value={this.state.inputValue}
             onChange={(event) =>
-              this.setState({ inputValue: event.target.value.toUpperCase() })
+              this.setState({ inputValue: event.target.value })
             }
           />
           <button
-            style={{ backgroundImage: `url(${adder})` }}
             className={styles.adder}
             onClick={this.onButtonClick}
           ></button>
@@ -64,6 +62,3 @@ InputItem.propTypes = {
 };
 
 export default InputItem;
-
-
-

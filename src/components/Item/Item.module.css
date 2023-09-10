@@ -8,9 +8,8 @@
   align-items: center;
   margin-bottom: 8px;
 }
-
 .item:hover {
-  border: 1px solid #356EFF;
+  border: 1px solid #356eff;
 }
 
 .item:hover .remove {
@@ -22,7 +21,7 @@
 }
 
 .remove {
-  background: #fff;
+  background: url("/public/images/remove.svg");
   border-width: 0;
   cursor: pointer;
   height: 16px;
@@ -31,4 +30,3 @@
   padding: 0;
   width: 16px;
 }
-

@@ -1,13 +1,40 @@
-.wrap {
-  margin: auto;
-  max-width: 700px;
-  font-family: 'Roboto';
+.menu {
+  height: 92px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.title {
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 28px;
-  display: flex;
+.nav {
   align-items: center;
+  display: flex;
+  gap: 32px;
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  border-radius: 37px;
+  color: #000;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  height: 44px;
+  line-height: 19px;
+  padding: 0;
+  width: 15vw;
+}
+
+.selected {
+  color: #fff;
+  background-color: #356eff;
+}
+
+@media (max-width: 767px) {
+  .button {
+    font-size: 14px;
+  }
 }

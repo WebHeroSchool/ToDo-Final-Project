@@ -1,0 +1,24 @@
+.wrap {
+  margin: auto;
+  max-width: 700px;
+  font-family: Roboto;
+}
+
+.title {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 233px;
+  width: 100%;
+  background: url("/public/images/empty.svg") center bottom no-repeat;
+}

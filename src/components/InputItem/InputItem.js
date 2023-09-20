@@ -26,7 +26,7 @@ class InputItem extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.wrapper}>
         <span
           className={classnames({
             [styles.error]: this.state.error

@@ -1,7 +1,10 @@
 .wrap {
-  margin: auto;
+  margin: 0 auto;
   max-width: 700px;
   font-family: Roboto;
+  display: grid;
+  grid-template-rows: 70px 7fr 1fr;
+  max-height: 645px;
 }
 
 .title {
